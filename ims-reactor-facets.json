@@ -23,6 +23,12 @@
       "count": 8
     },
     {
+      "label": "Tubular",
+      "code": "TUB",
+      "slug": "tubular",
+      "count": 3
+    },
+    {
       "label": "Fixed Bed",
       "code": "FXBD",
       "slug": "fixed-bed",
@@ -41,7 +47,7 @@
       "count": 0
     }
   ],
-  "tubularNote": "TUB appears as a subgroup code on several attributes but has no browse route on IMS. The marketing page currently lists Tubular as a type.",
+  "tubularNote": "Tubular DOES have a browse route at /inventory/search/equipment/reactor/tubular holding 3 units (IPP# 216053, 216028, 232538). It is absent from the type nav on the reactor landing page, which is why it was initially missed.",
   "materialOfConstruction": {
     "optionCount": 25,
     "options": [
@@ -440,5 +446,5 @@
     "Metric"
   ],
   "pageSize": 25,
-  "typeCountsNote": "Read from the rendered ITEMS counter on each type page, 7 Aug 2026. Sum is 951 against a reported total of 961, so about 10 units carry no subtype."
+  "typeCountsNote": "Read from the rendered ITEMS counter on each type page, 7 Aug 2026. 761+181+8+3+1+0+0 = 954 against a reported total of 961, so 7 units carry no subtype."
 }
