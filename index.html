@@ -71,8 +71,511 @@
     </div>
   </section>
 
+  <!-- =========================================================
+       PRODUCT SECTION, built to the supplied sample
+       heading and intro copy unchanged, filters are live
+       ========================================================= -->
+  <section class="sec" id="shop">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="sh">Buy Used Process Reactors by Subtype</h2>
+        <p>IPP stocks reactors across two subtypes. The key purchase decision is whether you need a complete agitated system or a reactor shell only. Browse representative products from each subtype below.</p>
+      </div>
+
+      <div class="shop">
+
+        <aside class="filters" id="filters" aria-label="Filter reactors">
+          <details class="fgroup" open>
+            <summary>By Subtype <span class="car">&#9650;</span></summary>
+            <div class="fbody">
+              <label class="fopt"><input type="checkbox" data-g="type" value="agitated"> Batch-Type Agitated <span class="n"></span></label>
+              <label class="fopt"><input type="checkbox" data-g="type" value="body"> Batch Type Body Only <span class="n"></span></label>
+              <label class="fopt"><input type="checkbox" data-g="type" value="fixed"> Fixed Bed <span class="n"></span></label>
+              <label class="fopt"><input type="checkbox" data-g="type" value="fluid"> Fluid Bed <span class="n"></span></label>
+              <label class="fopt"><input type="checkbox" data-g="type" value="hydro"> Hydrogenation <span class="n"></span></label>
+              <label class="fopt"><input type="checkbox" data-g="type" value="poly"> Polymerization <span class="n"></span></label>
+              <label class="fopt"><input type="checkbox" data-g="type" value="tubular"> Tubular <span class="n"></span></label>
+            </div>
+          </details>
+
+          <details class="fgroup" open>
+            <summary>Material of Construction <span class="car">&#9650;</span></summary>
+            <div class="fbody">
+              <label class="fopt"><input type="checkbox" data-g="material" value="glass"> Glass-Lined <span class="n"></span></label>
+              <label class="fopt"><input type="checkbox" data-g="material" value="ss"> Stainless Steel <span class="n"></span></label>
+              <label class="fopt"><input type="checkbox" data-g="material" value="hastelloy"> Hastelloy <span class="n"></span></label>
+              <label class="fopt"><input type="checkbox" data-g="material" value="alloy20"> Alloy 20 <span class="n"></span></label>
+              <label class="fopt"><input type="checkbox" data-g="material" value="carbon"> Carbon Steel <span class="n"></span></label>
+            </div>
+          </details>
+
+          <details class="fgroup" open>
+            <summary>Agitation Included <span class="car">&#9650;</span></summary>
+            <div class="fbody">
+              <label class="fopt"><input type="checkbox" data-g="agit" value="yes"> Yes <span class="n"></span></label>
+              <label class="fopt"><input type="checkbox" data-g="agit" value="no"> No <span class="n"></span></label>
+            </div>
+          </details>
+
+          <details class="fgroup" open>
+            <summary>By Condition <span class="car">&#9650;</span></summary>
+            <div class="fbody">
+              <label class="fopt"><input type="checkbox" data-g="cond" value="used"> Used <span class="n"></span></label>
+              <label class="fopt"><input type="checkbox" data-g="cond" value="reglassed"> Re-Glassed <span class="n"></span></label>
+              <label class="fopt"><input type="checkbox" data-g="cond" value="new"> New <span class="n"></span></label>
+            </div>
+          </details>
+
+          <details class="fgroup" open>
+            <summary>By Manufacturer <span class="car">&#9650;</span></summary>
+            <div class="fbody">
+              <label class="fopt"><input type="checkbox" data-g="mfr" value="pfaudler"> Pfaudler <span class="n"></span></label>
+              <label class="fopt"><input type="checkbox" data-g="mfr" value="dedietrich"> DeDietrich <span class="n"></span></label>
+              <label class="fopt"><input type="checkbox" data-g="mfr" value="uge"> UGE <span class="n"></span></label>
+              <label class="fopt"><input type="checkbox" data-g="mfr" value="gps"> Gale Process Solutions <span class="n"></span></label>
+              <label class="fopt"><input type="checkbox" data-g="mfr" value="nooter"> Nooter <span class="n"></span></label>
+              <label class="fopt"><input type="checkbox" data-g="mfr" value="other"> Other OEM <span class="n"></span></label>
+            </div>
+          </details>
+
+          <details class="fgroup" open>
+            <summary>Internal Pressure <span class="car">&#9650;</span></summary>
+            <div class="fbody">
+              <label class="fopt"><input type="checkbox" data-g="bar" value="b0"> Up to 7 bar <span class="n"></span></label>
+              <label class="fopt"><input type="checkbox" data-g="bar" value="b1"> 7 to 30 bar <span class="n"></span></label>
+              <label class="fopt"><input type="checkbox" data-g="bar" value="b2"> 30 to 100 bar <span class="n"></span></label>
+              <label class="fopt"><input type="checkbox" data-g="bar" value="b3"> Above 100 bar <span class="n"></span></label>
+            </div>
+          </details>
+
+          <details class="fgroup" open>
+            <summary>Internal Temperature <span class="car">&#9650;</span></summary>
+            <div class="fbody">
+              <label class="fopt"><input type="checkbox" data-g="temp" value="t0"> Up to 200&deg;C <span class="n"></span></label>
+              <label class="fopt"><input type="checkbox" data-g="temp" value="t1"> 200 to 300&deg;C <span class="n"></span></label>
+              <label class="fopt"><input type="checkbox" data-g="temp" value="t2"> Above 300&deg;C <span class="n"></span></label>
+            </div>
+          </details>
+
+          <div class="fslider">
+            <div class="st">Capacity</div>
+            <div class="track" id="track">
+              <span class="fill" id="fill"></span>
+              <input type="range" id="capMin" min="0" max="70000" step="50" value="0" aria-label="Minimum capacity in litres">
+              <input type="range" id="capMax" min="0" max="70000" step="50" value="70000" aria-label="Maximum capacity in litres">
+            </div>
+            <div class="srow">
+              <span>L</span><input type="text" id="capMinTxt" value="0" inputmode="numeric" aria-label="Minimum capacity">
+              <span>&ndash;</span>
+              <input type="text" id="capMaxTxt" value="70,000" inputmode="numeric" aria-label="Maximum capacity"><span>L</span>
+            </div>
+          </div>
+
+          <button class="reset" type="button" id="resetBtn">Reset Filters</button>
+        </aside>
+
+        <div>
+          <div class="shop-bar">
+            <span class="cnt" id="resultCount"></span>
+            <div class="sorter">
+              <label for="sortA">Sort by</label>
+              <select id="sortA">
+                <option value="cap-desc">Largest capacity first</option>
+                <option value="cap-asc">Smallest capacity first</option>
+                <option value="bar-desc">Highest pressure rating</option>
+                <option value="sku-desc">Recently added</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="chips-row" id="activeChips"></div>
+
+          <div class="pgrid" id="pgrid">
+            <article class="pcard" data-sku="247218" data-type="hydro" data-material="hastelloy" data-agit="no" data-cond="used" data-mfr="other" data-cap="70000" data-bar="b2" data-barval="98" data-temp="t2" data-stock="in">
+              <div class="pshot">
+                <span class="cond-tag">Used</span>
+                <span class="corner">IN<br>STOCK</span>
+                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M18 40h54v46a18 18 0 0 1-18 18H36a18 18 0 0 1-18-18z"/><path d="M18 40a27 9 0 0 1 54 0"/><path d="M30 24v16M60 24v16"/><circle cx="30" cy="20" r="4"/><circle cx="60" cy="20" r="4"/><path d="M26 62h38M26 76h38"/></svg>
+                <span class="ph-tag">Photography</span>
+              </div>
+              <div class="pbody">
+                <div class="sku">IPP&#35; 247218</div>
+                <h3><a href="#">Coek Engineering Hastelloy C-276 Hydrogenation Reactor</a></h3>
+                <div class="headline">70,000 L</div>
+                <div class="subline">98 bar &nbsp;&middot;&nbsp; 315&deg;C &nbsp;&middot;&nbsp; Hastelloy C-276</div>
+              </div>
+              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
+            </article>
+            <article class="pcard" data-sku="246935" data-type="fixed" data-material="carbon" data-agit="no" data-cond="used" data-mfr="nooter" data-cap="49200" data-bar="b0" data-barval="2.1" data-temp="t2" data-stock="in">
+              <div class="pshot">
+                <span class="cond-tag">Used</span>
+                <span class="corner">IN<br>STOCK</span>
+                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M28 10h34v92a10 10 0 0 1-10 10H38a10 10 0 0 1-10-10z"/><path d="M28 32h34M28 58h34M28 84h34"/><path d="M36 42h6M50 42h6M36 68h5M48 68h7"/><path d="M45 2v8"/></svg>
+                <span class="ph-tag">Photography</span>
+              </div>
+              <div class="pbody">
+                <div class="sku">IPP&#35; 246935</div>
+                <h3><a href="#">Nooter Carbon Steel Fixed Bed Reactor</a></h3>
+                <div class="headline">49,200 L</div>
+                <div class="subline">2.1 bar &nbsp;&middot;&nbsp; 371.1&deg;C &nbsp;&middot;&nbsp; Carbon Steel</div>
+              </div>
+              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
+            </article>
+            <article class="pcard" data-sku="230382" data-type="agitated" data-material="ss" data-agit="yes" data-cond="new" data-mfr="gps" data-cap="15150" data-bar="b1" data-barval="10" data-temp="t0" data-stock="in">
+              <div class="pshot">
+                <span class="cond-tag new">New</span>
+                <span class="corner">IN<br>STOCK</span>
+                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="36" y="4" width="18" height="14" rx="2"/><path d="M45 18v10"/><path d="M22 30h46v54a14 14 0 0 1-14 14H36a14 14 0 0 1-14-14z"/><path d="M16 42h6M68 42h6M16 68h6M68 68h6"/><path d="M45 28v46M35 74h20"/><path d="M32 100v10M58 100v10"/></svg>
+                <span class="ph-tag">Photography</span>
+              </div>
+              <div class="pbody">
+                <div class="sku">IPP&#35; 230382</div>
+                <h3><a href="#">Gale Process Solutions SS 316L Batch Reactor</a></h3>
+                <div class="headline">15,150 L</div>
+                <div class="subline">10 bar &nbsp;&middot;&nbsp; 150&deg;C &nbsp;&middot;&nbsp; 22.4 kW</div>
+              </div>
+              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
+            </article>
+            <article class="pcard" data-sku="204766" data-type="agitated" data-material="alloy20" data-agit="yes" data-cond="used" data-mfr="other" data-cap="11350" data-bar="b0" data-barval="5.9" data-temp="t0" data-stock="in">
+              <div class="pshot">
+                <span class="cond-tag">Used</span>
+                <span class="corner">IN<br>STOCK</span>
+                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="36" y="4" width="18" height="14" rx="2"/><path d="M45 18v10"/><path d="M22 30h46v54a14 14 0 0 1-14 14H36a14 14 0 0 1-14-14z"/><path d="M16 42h6M68 42h6M16 68h6M68 68h6"/><path d="M45 28v46M35 74h20"/><path d="M32 100v10M58 100v10"/></svg>
+                <span class="ph-tag">Photography</span>
+              </div>
+              <div class="pbody">
+                <div class="sku">IPP&#35; 204766</div>
+                <h3><a href="#">Alloy 20 Batch Reactor</a></h3>
+                <div class="headline">11,350 L</div>
+                <div class="subline">5.9 bar &nbsp;&middot;&nbsp; 100&deg;C &nbsp;&middot;&nbsp; 18.6 kW</div>
+              </div>
+              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
+            </article>
+            <article class="pcard" data-sku="217847" data-type="hydro" data-material="ss" data-agit="no" data-cond="used" data-mfr="other" data-cap="8900" data-bar="b2" data-barval="84" data-temp="t1" data-stock="in">
+              <div class="pshot">
+                <span class="cond-tag">Used</span>
+                <span class="corner">IN<br>STOCK</span>
+                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M18 40h54v46a18 18 0 0 1-18 18H36a18 18 0 0 1-18-18z"/><path d="M18 40a27 9 0 0 1 54 0"/><path d="M30 24v16M60 24v16"/><circle cx="30" cy="20" r="4"/><circle cx="60" cy="20" r="4"/><path d="M26 62h38M26 76h38"/></svg>
+                <span class="ph-tag">Photography</span>
+              </div>
+              <div class="pbody">
+                <div class="sku">IPP&#35; 217847</div>
+                <h3><a href="#">Johann Stahl Austenitic Stainless Hydrogenation Reactor</a></h3>
+                <div class="headline">8,900 L</div>
+                <div class="subline">84 bar &nbsp;&middot;&nbsp; 250&deg;C &nbsp;&middot;&nbsp; SS Austenitic</div>
+              </div>
+              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
+            </article>
+            <article class="pcard" data-sku="218617" data-type="agitated" data-material="glass" data-agit="yes" data-cond="reglassed" data-mfr="pfaudler" data-cap="7550" data-bar="b0" data-barval="6.9" data-temp="t1" data-stock="in">
+              <div class="pshot">
+                <span class="cond-tag reg">Re-Glassed</span>
+                <span class="corner">IN<br>STOCK</span>
+                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="36" y="4" width="18" height="14" rx="2"/><path d="M45 18v10"/><path d="M22 30h46v54a14 14 0 0 1-14 14H36a14 14 0 0 1-14-14z"/><path d="M16 42h6M68 42h6M16 68h6M68 68h6"/><path d="M45 28v46M35 74h20"/><path d="M32 100v10M58 100v10"/></svg>
+                <span class="ph-tag">Photography</span>
+              </div>
+              <div class="pbody">
+                <div class="sku">IPP&#35; 218617</div>
+                <h3><a href="#">Pfaudler RA Glass-Lined Batch Reactor</a></h3>
+                <div class="headline">7,550 L</div>
+                <div class="subline">6.9 bar &nbsp;&middot;&nbsp; 232.2&deg;C &nbsp;&middot;&nbsp; CBT impeller</div>
+              </div>
+              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
+            </article>
+            <article class="pcard" data-sku="213289" data-type="agitated" data-material="glass" data-agit="yes" data-cond="used" data-mfr="pfaudler" data-cap="7550" data-bar="b0" data-barval="6.9" data-temp="t1" data-stock="sold">
+              <div class="pshot">
+                <span class="cond-tag">Used</span>
+                <span class="corner sold">SOLD</span>
+                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="36" y="4" width="18" height="14" rx="2"/><path d="M45 18v10"/><path d="M22 30h46v54a14 14 0 0 1-14 14H36a14 14 0 0 1-14-14z"/><path d="M16 42h6M68 42h6M16 68h6M68 68h6"/><path d="M45 28v46M35 74h20"/><path d="M32 100v10M58 100v10"/></svg>
+                <span class="ph-tag">Photography</span>
+              </div>
+              <div class="pbody">
+                <div class="sku">IPP&#35; 213289</div>
+                <h3><a href="#">Pfaudler RA Glass-Lined Batch Reactor</a></h3>
+                <div class="headline">7,550 L</div>
+                <div class="subline">6.9 bar &nbsp;&middot;&nbsp; 232.2&deg;C &nbsp;&middot;&nbsp; Mechanical seal</div>
+              </div>
+              <div class="pfoot"><a class="btn btn-ghost btn-sm" href="#">Find a Similar Unit</a></div>
+            </article>
+            <article class="pcard" data-sku="209304" data-type="body" data-material="glass" data-agit="no" data-cond="reglassed" data-mfr="dedietrich" data-cap="3800" data-bar="b0" data-barval="6.9" data-temp="t1" data-stock="in">
+              <div class="pshot">
+                <span class="cond-tag reg">Re-Glassed</span>
+                <span class="corner">IN<br>STOCK</span>
+                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M22 26h46v56a15 15 0 0 1-15 15H37a15 15 0 0 1-15-15z"/><path d="M22 26l5-10h36l5 10"/><ellipse cx="45" cy="26" rx="23" ry="4"/><path d="M16 44h6M68 44h6"/><path d="M32 97v12M58 97v12"/></svg>
+                <span class="ph-tag">Photography</span>
+              </div>
+              <div class="pbody">
+                <div class="sku">IPP&#35; 209304</div>
+                <h3><a href="#">DeDietrich SA Glass-Lined Reactor Body</a></h3>
+                <div class="headline">3,800 L</div>
+                <div class="subline">6.9 bar &nbsp;&middot;&nbsp; 260&deg;C &nbsp;&middot;&nbsp; Body only</div>
+              </div>
+              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
+            </article>
+            <article class="pcard" data-sku="100392" data-type="agitated" data-material="ss" data-agit="yes" data-cond="used" data-mfr="other" data-cap="3500" data-bar="b1" data-barval="25.9" data-temp="t2" data-stock="in">
+              <div class="pshot">
+                <span class="cond-tag">Used</span>
+                <span class="corner">IN<br>STOCK</span>
+                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="36" y="4" width="18" height="14" rx="2"/><path d="M45 18v10"/><path d="M22 30h46v54a14 14 0 0 1-14 14H36a14 14 0 0 1-14-14z"/><path d="M16 42h6M68 42h6M16 68h6M68 68h6"/><path d="M45 28v46M35 74h20"/><path d="M32 100v10M58 100v10"/></svg>
+                <span class="ph-tag">Photography</span>
+              </div>
+              <div class="pbody">
+                <div class="sku">IPP&#35; 100392</div>
+                <h3><a href="#">Taylor Reid SS 321 Batch Reactor</a></h3>
+                <div class="headline">3,500 L</div>
+                <div class="subline">25.9 bar &nbsp;&middot;&nbsp; 315.6&deg;C &nbsp;&middot;&nbsp; SS 321</div>
+              </div>
+              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
+            </article>
+            <article class="pcard" data-sku="209999" data-type="hydro" data-material="ss" data-agit="no" data-cond="used" data-mfr="other" data-cap="3000" data-bar="b2" data-barval="37.9" data-temp="t1" data-stock="in">
+              <div class="pshot">
+                <span class="cond-tag">Used</span>
+                <span class="corner">IN<br>STOCK</span>
+                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M18 40h54v46a18 18 0 0 1-18 18H36a18 18 0 0 1-18-18z"/><path d="M18 40a27 9 0 0 1 54 0"/><path d="M30 24v16M60 24v16"/><circle cx="30" cy="20" r="4"/><circle cx="60" cy="20" r="4"/><path d="M26 62h38M26 76h38"/></svg>
+                <span class="ph-tag">Photography</span>
+              </div>
+              <div class="pbody">
+                <div class="sku">IPP&#35; 209999</div>
+                <h3><a href="#">Applied Fusions SS 316 Hydrogenation Reactor</a></h3>
+                <div class="headline">3,000 L</div>
+                <div class="subline">37.9 bar &nbsp;&middot;&nbsp; 250&deg;C &nbsp;&middot;&nbsp; SS 316</div>
+              </div>
+              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
+            </article>
+            <article class="pcard" data-sku="210982" data-type="agitated" data-material="glass" data-agit="yes" data-cond="new" data-mfr="dedietrich" data-cap="2850" data-bar="b0" data-barval="6.9" data-temp="t1" data-stock="in">
+              <div class="pshot">
+                <span class="cond-tag new">New</span>
+                <span class="corner">IN<br>STOCK</span>
+                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="36" y="4" width="18" height="14" rx="2"/><path d="M45 18v10"/><path d="M22 30h46v54a14 14 0 0 1-14 14H36a14 14 0 0 1-14-14z"/><path d="M16 42h6M68 42h6M16 68h6M68 68h6"/><path d="M45 28v46M35 74h20"/><path d="M32 100v10M58 100v10"/></svg>
+                <span class="ph-tag">Photography</span>
+              </div>
+              <div class="pbody">
+                <div class="sku">IPP&#35; 210982</div>
+                <h3><a href="#">DeDietrich CSA Glass-Lined Reactor</a></h3>
+                <div class="headline">2,850 L</div>
+                <div class="subline">6.9 bar &nbsp;&middot;&nbsp; 260&deg;C &nbsp;&middot;&nbsp; CSA model</div>
+              </div>
+              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
+            </article>
+            <article class="pcard" data-sku="204425" data-type="agitated" data-material="glass" data-agit="yes" data-cond="reglassed" data-mfr="other" data-cap="2500" data-bar="b0" data-barval="6" data-temp="t0" data-stock="in">
+              <div class="pshot">
+                <span class="cond-tag reg">Re-Glassed</span>
+                <span class="corner">IN<br>STOCK</span>
+                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="36" y="4" width="18" height="14" rx="2"/><path d="M45 18v10"/><path d="M22 30h46v54a14 14 0 0 1-14 14H36a14 14 0 0 1-14-14z"/><path d="M16 42h6M68 42h6M16 68h6M68 68h6"/><path d="M45 28v46M35 74h20"/><path d="M32 100v10M58 100v10"/></svg>
+                <span class="ph-tag">Photography</span>
+              </div>
+              <div class="pbody">
+                <div class="sku">IPP&#35; 204425</div>
+                <h3><a href="#">EWK AE Glass-Lined Batch Reactor</a></h3>
+                <div class="headline">2,500 L</div>
+                <div class="subline">6 bar &nbsp;&middot;&nbsp; 200&deg;C &nbsp;&middot;&nbsp; 6.6 kW</div>
+              </div>
+              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
+            </article>
+            <article class="pcard" data-sku="239314" data-type="agitated" data-material="ss" data-agit="yes" data-cond="used" data-mfr="other" data-cap="2100" data-bar="b0" data-barval="3" data-temp="t0" data-stock="in">
+              <div class="pshot">
+                <span class="cond-tag">Used</span>
+                <span class="corner">IN<br>STOCK</span>
+                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="36" y="4" width="18" height="14" rx="2"/><path d="M45 18v10"/><path d="M22 30h46v54a14 14 0 0 1-14 14H36a14 14 0 0 1-14-14z"/><path d="M16 42h6M68 42h6M16 68h6M68 68h6"/><path d="M45 28v46M35 74h20"/><path d="M32 100v10M58 100v10"/></svg>
+                <span class="ph-tag">Photography</span>
+              </div>
+              <div class="pbody">
+                <div class="sku">IPP&#35; 239314</div>
+                <h3><a href="#">B. Braun and Diessel SS 316 Biotech Reactor</a></h3>
+                <div class="headline">2,100 L</div>
+                <div class="subline">3 bar &nbsp;&middot;&nbsp; 150&deg;C &nbsp;&middot;&nbsp; Sanitary, CIP</div>
+              </div>
+              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
+            </article>
+            <article class="pcard" data-sku="246486" data-type="agitated" data-material="glass" data-agit="yes" data-cond="new" data-mfr="uge" data-cap="1900" data-bar="b0" data-barval="6.9" data-temp="t1" data-stock="in">
+              <div class="pshot">
+                <span class="cond-tag new">New</span>
+                <span class="corner">IN<br>STOCK</span>
+                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="36" y="4" width="18" height="14" rx="2"/><path d="M45 18v10"/><path d="M22 30h46v54a14 14 0 0 1-14 14H36a14 14 0 0 1-14-14z"/><path d="M16 42h6M68 42h6M16 68h6M68 68h6"/><path d="M45 28v46M35 74h20"/><path d="M32 100v10M58 100v10"/></svg>
+                <span class="ph-tag">Photography</span>
+              </div>
+              <div class="pbody">
+                <div class="sku">IPP&#35; 246486</div>
+                <h3><a href="#">UGE UA-500 Glass-Lined Batch Reactor</a></h3>
+                <div class="headline">1,900 L</div>
+                <div class="subline">6.9 bar &nbsp;&middot;&nbsp; 232.2&deg;C &nbsp;&middot;&nbsp; 5.6 kW</div>
+              </div>
+              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
+            </article>
+            <article class="pcard" data-sku="246487" data-type="agitated" data-material="glass" data-agit="yes" data-cond="new" data-mfr="uge" data-cap="1900" data-bar="b0" data-barval="6.9" data-temp="t1" data-stock="in">
+              <div class="pshot">
+                <span class="cond-tag new">New</span>
+                <span class="corner">IN<br>STOCK</span>
+                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="36" y="4" width="18" height="14" rx="2"/><path d="M45 18v10"/><path d="M22 30h46v54a14 14 0 0 1-14 14H36a14 14 0 0 1-14-14z"/><path d="M16 42h6M68 42h6M16 68h6M68 68h6"/><path d="M45 28v46M35 74h20"/><path d="M32 100v10M58 100v10"/></svg>
+                <span class="ph-tag">Photography</span>
+              </div>
+              <div class="pbody">
+                <div class="sku">IPP&#35; 246487</div>
+                <h3><a href="#">UGE UA-500 Glass-Lined Batch Reactor</a></h3>
+                <div class="headline">1,900 L</div>
+                <div class="subline">6.9 bar &nbsp;&middot;&nbsp; 232.2&deg;C &nbsp;&middot;&nbsp; Flat blade turbine</div>
+              </div>
+              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
+            </article>
+            <article class="pcard" data-sku="247008" data-type="agitated" data-material="glass" data-agit="yes" data-cond="reglassed" data-mfr="dedietrich" data-cap="1900" data-bar="b0" data-barval="5.2" data-temp="t1" data-stock="in">
+              <div class="pshot">
+                <span class="cond-tag reg">Re-Glassed</span>
+                <span class="corner">IN<br>STOCK</span>
+                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="36" y="4" width="18" height="14" rx="2"/><path d="M45 18v10"/><path d="M22 30h46v54a14 14 0 0 1-14 14H36a14 14 0 0 1-14-14z"/><path d="M16 42h6M68 42h6M16 68h6M68 68h6"/><path d="M45 28v46M35 74h20"/><path d="M32 100v10M58 100v10"/></svg>
+                <span class="ph-tag">Photography</span>
+              </div>
+              <div class="pbody">
+                <div class="sku">IPP&#35; 247008</div>
+                <h3><a href="#">DeDietrich CTJ Glass-Lined Batch Reactor</a></h3>
+                <div class="headline">1,900 L</div>
+                <div class="subline">5.2 bar &nbsp;&middot;&nbsp; 260&deg;C &nbsp;&middot;&nbsp; Double mech seal</div>
+              </div>
+              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
+            </article>
+            <article class="pcard" data-sku="225357" data-type="body" data-material="glass" data-agit="no" data-cond="reglassed" data-mfr="pfaudler" data-cap="1900" data-bar="b0" data-barval="6.9" data-temp="t0" data-stock="in">
+              <div class="pshot">
+                <span class="cond-tag reg">Re-Glassed</span>
+                <span class="corner">IN<br>STOCK</span>
+                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M22 26h46v56a15 15 0 0 1-15 15H37a15 15 0 0 1-15-15z"/><path d="M22 26l5-10h36l5 10"/><ellipse cx="45" cy="26" rx="23" ry="4"/><path d="M16 44h6M68 44h6"/><path d="M32 97v12M58 97v12"/></svg>
+                <span class="ph-tag">Photography</span>
+              </div>
+              <div class="pbody">
+                <div class="sku">IPP&#35; 225357</div>
+                <h3><a href="#">Pfaudler ELL Glass-Lined Reactor Body</a></h3>
+                <div class="headline">1,900 L</div>
+                <div class="subline">6.9 bar &nbsp;&middot;&nbsp; 176.7&deg;C &nbsp;&middot;&nbsp; Body only</div>
+              </div>
+              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
+            </article>
+            <article class="pcard" data-sku="200833" data-type="agitated" data-material="glass" data-agit="yes" data-cond="used" data-mfr="pfaudler" data-cap="1350" data-bar="b0" data-barval="6" data-temp="t0" data-stock="in">
+              <div class="pshot">
+                <span class="cond-tag">Used</span>
+                <span class="corner">IN<br>STOCK</span>
+                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="36" y="4" width="18" height="14" rx="2"/><path d="M45 18v10"/><path d="M22 30h46v54a14 14 0 0 1-14 14H36a14 14 0 0 1-14-14z"/><path d="M16 42h6M68 42h6M16 68h6M68 68h6"/><path d="M45 28v46M35 74h20"/><path d="M32 100v10M58 100v10"/></svg>
+                <span class="ph-tag">Photography</span>
+              </div>
+              <div class="pbody">
+                <div class="sku">IPP&#35; 200833</div>
+                <h3><a href="#">Pfaudler E Glass-Lined Batch Reactor</a></h3>
+                <div class="headline">1,350 L</div>
+                <div class="subline">6 bar &nbsp;&middot;&nbsp; 200&deg;C &nbsp;&middot;&nbsp; Packing seal</div>
+              </div>
+              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
+            </article>
+            <article class="pcard" data-sku="246485" data-type="agitated" data-material="glass" data-agit="yes" data-cond="new" data-mfr="uge" data-cap="1150" data-bar="b0" data-barval="6.9" data-temp="t1" data-stock="in">
+              <div class="pshot">
+                <span class="cond-tag new">New</span>
+                <span class="corner">IN<br>STOCK</span>
+                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="36" y="4" width="18" height="14" rx="2"/><path d="M45 18v10"/><path d="M22 30h46v54a14 14 0 0 1-14 14H36a14 14 0 0 1-14-14z"/><path d="M16 42h6M68 42h6M16 68h6M68 68h6"/><path d="M45 28v46M35 74h20"/><path d="M32 100v10M58 100v10"/></svg>
+                <span class="ph-tag">Photography</span>
+              </div>
+              <div class="pbody">
+                <div class="sku">IPP&#35; 246485</div>
+                <h3><a href="#">UGE UA-300 Glass-Lined Batch Reactor</a></h3>
+                <div class="headline">1,150 L</div>
+                <div class="subline">6.9 bar &nbsp;&middot;&nbsp; 232.2&deg;C &nbsp;&middot;&nbsp; Cryo-Lock</div>
+              </div>
+              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
+            </article>
+            <article class="pcard" data-sku="246494" data-type="body" data-material="glass" data-agit="no" data-cond="new" data-mfr="uge" data-cap="1150" data-bar="b0" data-barval="6.9" data-temp="t1" data-stock="in">
+              <div class="pshot">
+                <span class="cond-tag new">New</span>
+                <span class="corner">IN<br>STOCK</span>
+                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M22 26h46v56a15 15 0 0 1-15 15H37a15 15 0 0 1-15-15z"/><path d="M22 26l5-10h36l5 10"/><ellipse cx="45" cy="26" rx="23" ry="4"/><path d="M16 44h6M68 44h6"/><path d="M32 97v12M58 97v12"/></svg>
+                <span class="ph-tag">Photography</span>
+              </div>
+              <div class="pbody">
+                <div class="sku">IPP&#35; 246494</div>
+                <h3><a href="#">UGE UA-300 Glass-Lined Reactor Body</a></h3>
+                <div class="headline">1,150 L</div>
+                <div class="subline">6.9 bar &nbsp;&middot;&nbsp; 232.2&deg;C &nbsp;&middot;&nbsp; Body only</div>
+              </div>
+              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
+            </article>
+            <article class="pcard" data-sku="100612" data-type="agitated" data-material="glass" data-agit="yes" data-cond="used" data-mfr="dedietrich" data-cap="875" data-bar="b0" data-barval="2" data-temp="" data-stock="in">
+              <div class="pshot">
+                <span class="cond-tag">Used</span>
+                <span class="corner">IN<br>STOCK</span>
+                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="36" y="4" width="18" height="14" rx="2"/><path d="M45 18v10"/><path d="M22 30h46v54a14 14 0 0 1-14 14H36a14 14 0 0 1-14-14z"/><path d="M16 42h6M68 42h6M16 68h6M68 68h6"/><path d="M45 28v46M35 74h20"/><path d="M32 100v10M58 100v10"/></svg>
+                <span class="ph-tag">Photography</span>
+              </div>
+              <div class="pbody">
+                <div class="sku">IPP&#35; 100612</div>
+                <h3><a href="#">DeDietrich STA Glass-Lined Batch Reactor</a></h3>
+                <div class="headline">875 L</div>
+                <div class="subline">2 bar &nbsp;&middot;&nbsp; 2.2 kW</div>
+              </div>
+              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
+            </article>
+            <article class="pcard" data-sku="245527" data-type="agitated" data-material="glass" data-agit="yes" data-cond="reglassed" data-mfr="dedietrich" data-cap="378.5" data-bar="b1" data-barval="10.3" data-temp="t1" data-stock="in">
+              <div class="pshot">
+                <span class="cond-tag reg">Re-Glassed</span>
+                <span class="corner">IN<br>STOCK</span>
+                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="36" y="4" width="18" height="14" rx="2"/><path d="M45 18v10"/><path d="M22 30h46v54a14 14 0 0 1-14 14H36a14 14 0 0 1-14-14z"/><path d="M16 42h6M68 42h6M16 68h6M68 68h6"/><path d="M45 28v46M35 74h20"/><path d="M32 100v10M58 100v10"/></svg>
+                <span class="ph-tag">Photography</span>
+              </div>
+              <div class="pbody">
+                <div class="sku">IPP&#35; 245527</div>
+                <h3><a href="#">DeDietrich Glass-Lined Batch Reactor</a></h3>
+                <div class="headline">378.5 L</div>
+                <div class="subline">10.3 bar &nbsp;&middot;&nbsp; 260&deg;C &nbsp;&middot;&nbsp; 3.7 kW</div>
+              </div>
+              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
+            </article>
+            <article class="pcard" data-sku="216028" data-type="tubular" data-material="ss" data-agit="no" data-cond="used" data-mfr="other" data-cap="" data-bar="b2" data-barval="85.1" data-temp="t1" data-stock="in">
+              <div class="pshot">
+                <span class="cond-tag">Used</span>
+                <span class="corner">IN<br>STOCK</span>
+                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M20 24h40a12 12 0 0 1 0 24H30a12 12 0 0 0 0 24h30a12 12 0 0 1 0 24H20"/><path d="M10 24h10M10 96h10"/><circle cx="66" cy="36" r="3"/><circle cx="24" cy="60" r="3"/><circle cx="66" cy="84" r="3"/></svg>
+                <span class="ph-tag">Photography</span>
+              </div>
+              <div class="pbody">
+                <div class="sku">IPP&#35; 216028</div>
+                <h3><a href="#">Fox Fabricators SS 304 Tubular Loop Reactor</a></h3>
+                <div class="headline">Tube reactor</div>
+                <div class="subline">85.1 bar &nbsp;&middot;&nbsp; 204.4&deg;C &nbsp;&middot;&nbsp; 182,900 mm tube</div>
+              </div>
+              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
+            </article>
+            <article class="pcard" data-sku="232538" data-type="tubular" data-material="ss" data-agit="no" data-cond="used" data-mfr="other" data-cap="" data-bar="" data-barval="-1" data-temp="t2" data-stock="in">
+              <div class="pshot">
+                <span class="cond-tag">Used</span>
+                <span class="corner">IN<br>STOCK</span>
+                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M20 24h40a12 12 0 0 1 0 24H30a12 12 0 0 0 0 24h30a12 12 0 0 1 0 24H20"/><path d="M10 24h10M10 96h10"/><circle cx="66" cy="36" r="3"/><circle cx="24" cy="60" r="3"/><circle cx="66" cy="84" r="3"/></svg>
+                <span class="ph-tag">Photography</span>
+              </div>
+              <div class="pbody">
+                <div class="sku">IPP&#35; 232538</div>
+                <h3><a href="#">Snowtech Hydro Cracker SS 316 Tubular Reactor</a></h3>
+                <div class="headline">Tube reactor</div>
+                <div class="subline">500&deg;C &nbsp;&middot;&nbsp; Hydrocracking</div>
+              </div>
+              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
+            </article>
+          </div>
+
+          <div class="empty-state" id="emptyState" hidden>
+            <h3>No reactors match those filters</h3>
+            <p>IPP sources to specification. Send your capacity, duty and rating and the sourcing team will search the global market and come back with candidate units.</p>
+            <div class="acts">
+              <a class="btn btn-primary" href="#">Request a Sourcing Search</a>
+              <button class="btn btn-ghost" type="button" id="clearFromEmpty">Clear All Filters</button>
+            </div>
+          </div>
+
+          <div class="see-more" id="seeMoreWrap">
+            <button class="btn btn-primary" type="button" id="seeMore">
+              See More
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ===== BROWSE BY TYPE, copy unchanged ===== -->
-  <section class="sec">
+  <section class="sec alt">
     <div class="wrap">
       <div class="sec-head">
         <h2 class="sh">Browse Used Reactors by Type</h2>
@@ -127,300 +630,6 @@
           <h3>Tubular Reactors</h3>
           <p>Continuous-flow reactors with reactants flowing through long, narrow tubes for precise residence-time control. Available from Fox Fabricators and Snowtech. Stainless steel 304 and 316 construction.</p>
           <a class="go" href="#">Browse Tubular Reactors &rarr;</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       PRODUCT SECTION, built to the supplied sample
-       heading and intro copy unchanged
-       ========================================================= -->
-  <section class="sec alt" id="shop">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2 class="sh">Buy Used Process Reactors by Subtype</h2>
-        <p>IPP stocks reactors across two subtypes. The key purchase decision is whether you need a complete agitated system or a reactor shell only. Browse representative products from each subtype below.</p>
-      </div>
-
-      <div class="shop">
-
-        <!-- ===== filter rail ===== -->
-        <aside class="filters" aria-label="Filter reactors">
-          <details class="fgroup" open>
-            <summary>By Subtype <span class="car">&#9650;</span></summary>
-            <div class="fbody">
-              <label class="fopt"><input type="checkbox" checked> Batch-Type Agitated <span class="n">19</span></label>
-              <label class="fopt"><input type="checkbox"> Batch Type Body Only <span class="n">8</span></label>
-              <label class="fopt"><input type="checkbox"> Fixed Bed <span class="n">4</span></label>
-              <label class="fopt"><input type="checkbox"> Fluid Bed <span class="n">0</span></label>
-              <label class="fopt"><input type="checkbox"> Hydrogenation <span class="n">6</span></label>
-              <label class="fopt"><input type="checkbox"> Polymerization <span class="n">0</span></label>
-              <label class="fopt"><input type="checkbox"> Tubular <span class="n">3</span></label>
-            </div>
-          </details>
-
-          <details class="fgroup" open>
-            <summary>Material of Construction <span class="car">&#9650;</span></summary>
-            <div class="fbody">
-              <label class="fopt"><input type="checkbox"> Glass-Lined <span class="n">23</span></label>
-              <label class="fopt"><input type="checkbox"> Stainless Steel <span class="n">14</span></label>
-              <label class="fopt"><input type="checkbox"> Hastelloy <span class="n">3</span></label>
-              <label class="fopt"><input type="checkbox"> Titanium <span class="n">2</span></label>
-              <label class="fopt"><input type="checkbox"> Alloy 20 <span class="n">2</span></label>
-              <label class="fopt"><input type="checkbox"> Carbon Steel <span class="n">4</span></label>
-              <label class="fopt"><input type="checkbox"> Monel, Inconel, Duplex <span class="n">3</span></label>
-            </div>
-          </details>
-
-          <details class="fgroup" open>
-            <summary>Agitation Included <span class="car">&#9650;</span></summary>
-            <div class="fbody">
-              <label class="fopt"><input type="checkbox"> Yes <span class="n">19</span></label>
-              <label class="fopt"><input type="checkbox"> No <span class="n">8</span></label>
-            </div>
-          </details>
-
-          <details class="fgroup" open>
-            <summary>By Condition <span class="car">&#9650;</span></summary>
-            <div class="fbody">
-              <label class="fopt"><input type="checkbox"> Used <span class="n">21</span></label>
-              <label class="fopt"><input type="checkbox"> Re-Glassed <span class="n">11</span></label>
-              <label class="fopt"><input type="checkbox"> New <span class="n">9</span></label>
-              <label class="fopt"><input type="checkbox"> Unused <span class="n">3</span></label>
-              <label class="fopt"><input type="checkbox"> Needs Reglass <span class="n">2</span></label>
-            </div>
-          </details>
-
-          <details class="fgroup" open>
-            <summary>By Manufacturer <span class="car">&#9650;</span></summary>
-            <div class="fbody">
-              <label class="fopt"><input type="checkbox"> Pfaudler <span class="n">12</span></label>
-              <label class="fopt"><input type="checkbox"> DeDietrich <span class="n">9</span></label>
-              <label class="fopt"><input type="checkbox"> UGE <span class="n">7</span></label>
-              <label class="fopt"><input type="checkbox"> Gale Process Solutions <span class="n">4</span></label>
-              <label class="fopt"><input type="checkbox"> Nooter <span class="n">1</span></label>
-              <label class="fopt"><input type="checkbox"> Other OEM <span class="n">14</span></label>
-            </div>
-          </details>
-
-          <details class="fgroup" open>
-            <summary>Internal Pressure <span class="car">&#9650;</span></summary>
-            <div class="fbody">
-              <label class="fopt"><input type="checkbox"> Up to 7 bar <span class="n">18</span></label>
-              <label class="fopt"><input type="checkbox"> 7 to 30 bar <span class="n">9</span></label>
-              <label class="fopt"><input type="checkbox"> 30 to 100 bar <span class="n">6</span></label>
-              <label class="fopt"><input type="checkbox"> Above 100 bar <span class="n">2</span></label>
-              <label class="fopt"><input type="checkbox"> Full vacuum capable <span class="n">12</span></label>
-            </div>
-          </details>
-
-          <details class="fgroup" open>
-            <summary>Internal Temperature <span class="car">&#9650;</span></summary>
-            <div class="fbody">
-              <label class="fopt"><input type="checkbox"> Up to 200&deg;C <span class="n">10</span></label>
-              <label class="fopt"><input type="checkbox"> 200 to 300&deg;C <span class="n">17</span></label>
-              <label class="fopt"><input type="checkbox"> Above 300&deg;C <span class="n">6</span></label>
-            </div>
-          </details>
-
-          <details class="fgroup" open>
-            <summary>Compliance <span class="car">&#9650;</span></summary>
-            <div class="fbody">
-              <label class="fopt"><input type="checkbox"> ASME <span class="n">16</span></label>
-              <label class="fopt"><input type="checkbox"> CE / PED <span class="n">11</span></label>
-              <label class="fopt"><input type="checkbox"> National Board <span class="n">9</span></label>
-              <label class="fopt"><input type="checkbox"> CRN <span class="n">4</span></label>
-            </div>
-          </details>
-
-          <div class="fslider">
-            <div class="st">Capacity</div>
-            <div class="track">
-              <span class="fill"></span>
-              <span class="knob a"></span>
-              <span class="knob b"></span>
-            </div>
-            <div class="srow">
-              <span>L</span><input value="2" aria-label="Minimum capacity in litres">
-              <span>&ndash;</span>
-              <input value="80,000" aria-label="Maximum capacity in litres"><span>L</span>
-            </div>
-          </div>
-
-          <button class="reset" type="button">Reset Filters</button>
-        </aside>
-
-        <!-- ===== grid ===== -->
-        <div>
-          <div class="shop-bar">
-            <span class="cnt"><b>Showing 9</b> of 47 reactors</span>
-            <div class="sorter">
-              <label for="sortA">Sort by</label>
-              <select id="sortA">
-                <option>Largest capacity first</option>
-                <option>Smallest capacity first</option>
-                <option>Highest pressure rating</option>
-                <option>Recently added</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="pgrid">
-
-            <article class="pcard">
-              <div class="pshot">
-                <span class="cond-tag">Used</span>
-                <span class="corner">IN<br>STOCK</span>
-                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M18 40h54v46a18 18 0 0 1-18 18H36a18 18 0 0 1-18-18z"/><path d="M18 40a27 9 0 0 1 54 0"/><path d="M30 24v16M60 24v16"/><circle cx="30" cy="20" r="4"/><circle cx="60" cy="20" r="4"/><path d="M26 62h38M26 76h38"/></svg>
-                <span class="ph-tag">Photography</span>
-              </div>
-              <div class="pbody">
-                <div class="sku">IPP&#35; 247218</div>
-                <h3><a href="#">Coek Engineering Hastelloy C-276 Hydrogenation Reactor</a></h3>
-                <div class="headline">70,000 L</div>
-                <div class="subline">98 bar &nbsp;&middot;&nbsp; 315&deg;C &nbsp;&middot;&nbsp; Hastelloy C-276</div>
-              </div>
-              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
-            </article>
-
-            <article class="pcard">
-              <div class="pshot">
-                <span class="cond-tag">Used</span>
-                <span class="corner">IN<br>STOCK</span>
-                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M28 10h34v92a10 10 0 0 1-10 10H38a10 10 0 0 1-10-10z"/><path d="M28 32h34M28 58h34M28 84h34"/><path d="M36 42h6M50 42h6M36 68h5M48 68h7"/><path d="M45 2v8"/></svg>
-                <span class="ph-tag">Photography</span>
-              </div>
-              <div class="pbody">
-                <div class="sku">IPP&#35; 246935</div>
-                <h3><a href="#">Nooter Carbon Steel Fixed Bed Reactor</a></h3>
-                <div class="headline">49,200 L</div>
-                <div class="subline">2.1 bar &nbsp;&middot;&nbsp; 371.1&deg;C &nbsp;&middot;&nbsp; Carbon Steel</div>
-              </div>
-              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
-            </article>
-
-            <article class="pcard">
-              <div class="pshot">
-                <span class="cond-tag">New</span>
-                <span class="corner">IN<br>STOCK</span>
-                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="36" y="4" width="18" height="13" rx="2"/><path d="M45 17v11"/><path d="M22 30h46v52a15 15 0 0 1-15 15H37a15 15 0 0 1-15-15z"/><path d="M45 28v40"/><ellipse cx="45" cy="70" rx="13" ry="4"/><path d="M16 44h6M68 44h6"/><path d="M32 98v12M58 98v12"/></svg>
-                <span class="ph-tag">Photography</span>
-              </div>
-              <div class="pbody">
-                <div class="sku">IPP&#35; 230382</div>
-                <h3><a href="#">Gale Process Solutions SS 316L Batch Reactor</a></h3>
-                <div class="headline">15,150 L</div>
-                <div class="subline">10 bar &nbsp;&middot;&nbsp; 150&deg;C &nbsp;&middot;&nbsp; 22.4 kW</div>
-              </div>
-              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
-            </article>
-
-            <article class="pcard">
-              <div class="pshot">
-                <span class="cond-tag">Used</span>
-                <span class="corner">IN<br>STOCK</span>
-                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="37" y="5" width="16" height="13" rx="2"/><path d="M45 18v10"/><path d="M23 30h44v50a16 16 0 0 1-16 16H39a16 16 0 0 1-16-16z"/><path d="M45 28v36M35 64h20"/><path d="M17 46h6M67 46h6"/><path d="M33 97v11M57 97v11"/></svg>
-                <span class="ph-tag">Photography</span>
-              </div>
-              <div class="pbody">
-                <div class="sku">IPP&#35; 204766</div>
-                <h3><a href="#">Alloy 20 Batch Reactor</a></h3>
-                <div class="headline">11,350 L</div>
-                <div class="subline">5.9 bar &nbsp;&middot;&nbsp; 100&deg;C &nbsp;&middot;&nbsp; 18.6 kW</div>
-              </div>
-              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
-            </article>
-
-            <article class="pcard">
-              <div class="pshot">
-                <span class="cond-tag">Used</span>
-                <span class="corner">IN<br>STOCK</span>
-                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M20 38h50v48a18 18 0 0 1-18 18H38a18 18 0 0 1-18-18z"/><path d="M20 38a25 9 0 0 1 50 0"/><path d="M32 22v16M58 22v16"/><circle cx="32" cy="18" r="4"/><circle cx="58" cy="18" r="4"/><path d="M28 60h34M28 74h34"/></svg>
-                <span class="ph-tag">Photography</span>
-              </div>
-              <div class="pbody">
-                <div class="sku">IPP&#35; 217847</div>
-                <h3><a href="#">Johann Stahl Austenitic Stainless Hydrogenation Reactor</a></h3>
-                <div class="headline">8,900 L</div>
-                <div class="subline">84 bar &nbsp;&middot;&nbsp; 250&deg;C &nbsp;&middot;&nbsp; SS Austenitic</div>
-              </div>
-              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
-            </article>
-
-            <article class="pcard">
-              <div class="pshot">
-                <span class="cond-tag">Re-Glassed</span>
-                <span class="corner">IN<br>STOCK</span>
-                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="36" y="4" width="18" height="14" rx="2"/><path d="M45 18v10"/><path d="M20 30h50v54a14 14 0 0 1-14 14H34a14 14 0 0 1-14-14z"/><path d="M14 42h6M70 42h6M14 68h6M70 68h6"/><path d="M45 28v46M34 74h22"/><path d="M30 100v10M60 100v10"/></svg>
-                <span class="ph-tag">Photography</span>
-              </div>
-              <div class="pbody">
-                <div class="sku">IPP&#35; 218617</div>
-                <h3><a href="#">Pfaudler RA Glass-Lined Batch Reactor</a></h3>
-                <div class="headline">7,550 L</div>
-                <div class="subline">6.9 bar &nbsp;&middot;&nbsp; 232.2&deg;C &nbsp;&middot;&nbsp; 11.2 kW</div>
-              </div>
-              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
-            </article>
-
-            <article class="pcard">
-              <div class="pshot">
-                <span class="cond-tag">Used</span>
-                <span class="corner sold">SOLD</span>
-                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="36" y="4" width="18" height="14" rx="2"/><path d="M45 18v10"/><path d="M20 30h50v54a14 14 0 0 1-14 14H34a14 14 0 0 1-14-14z"/><path d="M14 42h6M70 42h6"/><path d="M45 28v46M34 74h22"/><path d="M30 100v10M60 100v10"/></svg>
-                <span class="ph-tag">Photography</span>
-              </div>
-              <div class="pbody">
-                <div class="sku">IPP&#35; 213289</div>
-                <h3><a href="#">Pfaudler RA Glass-Lined Batch Reactor</a></h3>
-                <div class="headline">7,550 L</div>
-                <div class="subline">6.9 bar &nbsp;&middot;&nbsp; 232.2&deg;C &nbsp;&middot;&nbsp; Mechanical seal</div>
-              </div>
-              <div class="pfoot"><a class="btn btn-ghost btn-sm" href="#">Find a Similar Unit</a></div>
-            </article>
-
-            <article class="pcard">
-              <div class="pshot">
-                <span class="cond-tag">Re-Glassed</span>
-                <span class="corner">IN<br>STOCK</span>
-                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M22 26h46v56a15 15 0 0 1-15 15H37a15 15 0 0 1-15-15z"/><path d="M22 26l5-10h36l5 10"/><ellipse cx="45" cy="26" rx="23" ry="4"/><path d="M16 44h6M68 44h6"/><path d="M32 97v12M58 97v12"/></svg>
-                <span class="ph-tag">Photography</span>
-              </div>
-              <div class="pbody">
-                <div class="sku">IPP&#35; 209304</div>
-                <h3><a href="#">DeDietrich SA Glass-Lined Reactor Body</a></h3>
-                <div class="headline">3,800 L</div>
-                <div class="subline">6.9 bar &nbsp;&middot;&nbsp; 260&deg;C &nbsp;&middot;&nbsp; Body only</div>
-              </div>
-              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
-            </article>
-
-            <article class="pcard">
-              <div class="pshot">
-                <span class="cond-tag">Used</span>
-                <span class="corner">IN<br>STOCK</span>
-                <svg viewBox="0 0 90 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M24 34h42v50a15 15 0 0 1-15 15H39a15 15 0 0 1-15-15z"/><path d="M24 34a21 8 0 0 1 42 0"/><path d="M45 20v14"/><path d="M18 50h6M66 50h6"/><path d="M30 64h30M30 78h30"/><path d="M34 99v10M56 99v10"/></svg>
-                <span class="ph-tag">Photography</span>
-              </div>
-              <div class="pbody">
-                <div class="sku">IPP&#35; 100392</div>
-                <h3><a href="#">Taylor Reid SS 321 Batch Reactor</a></h3>
-                <div class="headline">3,500 L</div>
-                <div class="subline">25.9 bar &nbsp;&middot;&nbsp; 315.6&deg;C &nbsp;&middot;&nbsp; SS 321</div>
-              </div>
-              <div class="pfoot"><a class="btn btn-dark btn-sm" href="#">View Specifications</a></div>
-            </article>
-
-          </div>
-
-          <div class="see-more">
-            <a class="btn btn-primary" href="#">
-              See More
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M6 9l6 6 6-6"/></svg>
-            </a>
-          </div>
         </div>
 
       </div>
@@ -854,12 +1063,46 @@
       </div>
 
       <div class="tabs" role="tablist" aria-label="FAQ topic">
-        <button class="tab" role="tab" aria-selected="true" data-p="f1">General</button>
+        <button class="tab" role="tab" aria-selected="true" data-p="f0">Reactor Basics</button>
+        <button class="tab" role="tab" aria-selected="false" data-p="f1">General</button>
         <button class="tab" role="tab" aria-selected="false" data-p="f2">Reactor Types</button>
         <button class="tab" role="tab" aria-selected="false" data-p="f3">Materials &amp; Specs</button>
       </div>
 
-      <div class="tabpanel" id="f1" role="tabpanel">
+      <div class="tabpanel" id="f0" role="tabpanel">
+        <div class="faqs">
+          <details class="faq" open>
+            <summary><h3>What is a chemical reactor?</h3><span class="pm">+</span></summary>
+            <div class="fa">A chemical reactor is a pressure vessel in which a controlled chemical reaction takes place. It holds the reactants, contains the pressure and temperature the reaction needs, and transfers heat in or out through a jacket or coil. In process plants a reactor is defined by four things: its capacity, its material of construction, its internal pressure rating and its internal temperature rating. Everything else, including agitation, sealing and instrumentation, is selected around those four.</div>
+          </details>
+          <details class="faq">
+            <summary><h3>What are the main types of chemical reactors?</h3><span class="pm">+</span></summary>
+            <div class="fa">Process reactors fall into two families. Batch reactors hold a fixed charge for the duration of the reaction and are emptied between runs, which suits pharmaceutical, fine chemical and specialty production where recipes change. Continuous reactors keep reactants flowing through, which suits high volume single product duty. Within those families IPP stocks batch-type agitated, batch type body only, fixed bed, fluid bed, hydrogenation, polymerization and tubular designs.</div>
+          </details>
+          <details class="faq">
+            <summary><h3>How does a batch reactor work?</h3><span class="pm">+</span></summary>
+            <div class="fa">The vessel is charged with reactants, sealed, then brought to the required temperature by circulating a heating or cooling medium through the jacket. An agitator driven from the top keeps the contents mixed and the heat transfer even. The reaction runs to completion under controlled pressure and temperature, the batch is discharged, and the vessel is cleaned for the next run. Mixing quality is set by the impeller type, and containment is set by the shaft seal.</div>
+          </details>
+          <details class="faq">
+            <summary><h3>What is the difference between a batch reactor and a continuous reactor?</h3><span class="pm">+</span></summary>
+            <div class="fa">A batch reactor processes one fixed charge at a time and is emptied between runs. A continuous reactor, such as a tubular or fixed bed design, has reactants flowing through it without interruption. Batch equipment is more flexible across products and is normal in pharmaceutical and specialty chemical plants. Continuous equipment gives more consistent output at higher volume for a single product.</div>
+          </details>
+          <details class="faq">
+            <summary><h3>What is a glass-lined reactor and when is it used?</h3><span class="pm">+</span></summary>
+            <div class="fa">A glass-lined reactor is a steel vessel with a fused glass lining on every wetted surface. The steel carries the pressure and the glass carries the corrosion resistance, which lets the vessel handle acids and aggressive intermediates that would attack stainless steel. It is the standard choice in pharmaceutical, agrochemical and fine chemical duty. Worn linings can be stripped and re-glassed to factory specification rather than the vessel being scrapped.</div>
+          </details>
+          <details class="faq">
+            <summary><h3>What does jacketed mean on a reactor?</h3><span class="pm">+</span></summary>
+            <div class="fa">A jacket is an outer chamber around the vessel wall through which steam, hot oil, chilled water or glycol is circulated to heat or cool the contents. The jacket carries its own separate pressure and temperature rating, which is why listings quote internal and jacket ratings independently. A reactor cannot be selected on internal rating alone if the duty depends on the heat transfer the jacket provides.</div>
+          </details>
+          <details class="faq">
+            <summary><h3>What does reactor capacity mean on a listing?</h3><span class="pm">+</span></summary>
+            <div class="fa">Listed capacity is the design or nominal volume of the vessel, not the working volume. Usable batch size is normally lower, because the charge has to sit below the agitator sweep and leave headspace for mixing, foaming and expansion. When matching a reactor to a process, compare the required working volume against the listed design capacity with that margin in mind.</div>
+          </details>
+        </div>
+      </div>
+
+      <div class="tabpanel" id="f1" role="tabpanel" hidden>
         <div class="faqs">
           <details class="faq" open>
             <summary><h3>What types of reactors does IPP stock?</h3><span class="pm">+</span></summary>

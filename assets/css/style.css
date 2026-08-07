@@ -368,3 +368,93 @@ body {
   font-size: 15px;
   line-height: 1.6;
 }
+
+/* ------------------------------------------------------------------
+   Working filter rail. Dual-thumb capacity range, zero-count facets,
+   active filter chips and the no-results state.
+   ------------------------------------------------------------------ */
+.fopt.is-empty { opacity: .42; cursor: not-allowed; }
+.fopt input:disabled { cursor: not-allowed; }
+
+.fslider .track {
+  position: relative;
+  height: 4px;
+  background: var(--rule2);
+  border-radius: 2px;
+  margin: 6px 4px 15px;
+}
+.fslider .track .fill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: var(--blue);
+  border-radius: 2px;
+}
+.fslider .track input[type="range"] {
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  top: 50%;
+  width: calc(100% + 8px);
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0;
+  height: 15px;
+  background: none;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  pointer-events: none;
+}
+.fslider .track input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  pointer-events: auto;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--blue);
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .32);
+  cursor: grab;
+}
+.fslider .track input[type="range"]::-moz-range-thumb {
+  pointer-events: auto;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--blue);
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .32);
+  cursor: grab;
+}
+.fslider .track input[type="range"]::-moz-range-track { background: none; border: none; }
+.fslider .track input[type="range"]:focus-visible::-webkit-slider-thumb { outline: 2px solid var(--deep); outline-offset: 2px; }
+
+.chips-row { margin-bottom: 14px; }
+.chips-row[hidden] { display: none; }
+
+.empty-state {
+  border: 1px dashed var(--rule2);
+  border-radius: 6px;
+  background: var(--white);
+  padding: 44px 30px;
+  text-align: center;
+}
+.empty-state h3 {
+  font-family: var(--head);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 9px;
+}
+.empty-state p {
+  margin: 0 auto 20px;
+  max-width: 54ch;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.empty-state .acts { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+
+.pcard[hidden] { display: none; }
+.see-more[hidden] { display: none; }
