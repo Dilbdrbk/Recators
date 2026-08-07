@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 <div class="page">
@@ -42,6 +42,8 @@
   <!-- ===== HERO, copy unchanged ===== -->
   <section class="hero">
     <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-main">
       <h1>Buy Used Reactors for Sale</h1>
       <p class="lede">
         Buying used reactors through International Process Plants gives chemical, pharmaceutical,
@@ -62,11 +64,22 @@
         <div class="hstat"><div class="v">1980</div><div class="k">Established Since</div></div>
         <div class="hstat"><div class="v">15</div><div class="k">Countries with Offices</div></div>
       </div>
+        </div>
 
-      <div class="hero-cards">
-        <a class="hcard" href="#"><h3>Batch-Type Agitated Reactors</h3><p>Complete reactor systems with agitation</p></a>
-        <a class="hcard" href="#"><h3>Batch Type Body Only Reactors</h3><p>Reactor shells without agitation</p></a>
-        <a class="hcard" href="#"><h3>Glass-Lined Reactors</h3><p>Glass-lined units from Pfaudler, DeDietrich, UGE</p></a>
+        <div class="hero-cards">
+        <a class="hcard" href="#">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="10" y="2" width="4" height="3"/><path d="M12 5v4"/><path d="M6 8h12v10a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4z"/><path d="M9 14h6"/></svg></span>
+          <span class="tx"><h3>Batch-Type Agitated Reactors</h3><p>Complete reactor systems with agitation</p></span>
+        </a>
+        <a class="hcard" href="#">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 6h12v12a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4z"/><ellipse cx="12" cy="6" rx="6" ry="1.6"/></svg></span>
+          <span class="tx"><h3>Batch Type Body Only Reactors</h3><p>Reactor shells without agitation</p></span>
+        </a>
+        <a class="hcard" href="#">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 3h10v15a4 4 0 0 1-4 4h-2a4 4 0 0 1-4-4z"/><path d="M7 9h10M7 14h10"/><path d="M12 3v15"/></svg></span>
+          <span class="tx"><h3>Glass-Lined Reactors</h3><p>Glass-lined units from Pfaudler, DeDietrich, UGE</p></span>
+        </a>
+        </div>
       </div>
     </div>
   </section>
@@ -1139,9 +1152,11 @@
   <!-- ===== NEW REACTORS, copy unchanged ===== -->
   <section class="sec">
     <div class="wrap">
-      <div class="newbox">
-        <h2>Looking for New Reactors?</h2>
+      <div class="sec-head">
+        <h2 class="sh">Looking for New Reactors?</h2>
         <p>IPP Group supplies new reactors through its Gale Process Solutions (GPS) subsidiary, which provides custom fabricated stainless steel equipment with 12&ndash;16 week average delivery. IPP also offers new and re-glassed reactors through its UGE (Universal Glasteel Equipment) division. If you cannot find what you need in our used inventory, we can build or re-glass to your specifications.</p>
+      </div>
+      <div class="sec-cta">
         <a class="btn btn-primary" href="#">Ask About New Equipment</a>
       </div>
     </div>
@@ -1166,6 +1181,6 @@
     </div>
   </div>
 </div>
-<script src="/assets/js/main.js" defer></script>
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
