@@ -52,7 +52,30 @@
         from 2 L to 80,000 L in glass-lined, stainless steel, Hastelloy, and titanium construction.
         Purchasing used saves up to 50% of capital and 90% of lead time versus buying new. IPP has
         supplied process equipment worldwide since 1980.
+        <button type="button" class="lede-toggle" id="ledeToggle" aria-expanded="false" aria-controls="ledeMore">
+          <span class="open-icon" aria-hidden="true">&#9654;</span><span class="sr">Read more</span>
+        </button>
       </p>
+      <div class="lede-more" id="ledeMore" hidden>
+        <p class="lede">
+          IPP stocks batch-type agitated reactors with complete agitation systems and batch type body
+          only reactor shells. Materials of construction include glass-lined, stainless steel 316, 316L,
+          304, and 321, Hastelloy C-22, C-276, and C-4, and titanium. Volume capacity ranges from 2 L to
+          80,000 L (0.5 to 21,150 gallons). Pressure ratings range from 0.14 bar (2 psi) to 358.7 bar
+          (5,200 psi).
+        </p>
+        <p class="lede">
+          Condition options include good used, re-glassed, new, and surplus. IPP offers re-glassed
+          reactors through its Universal Glasteel Equipment (UGE) division and new stainless steel
+          reactors through Gale Process Solutions (GPS). All vessels are ASME-coded, National Board,
+          CRN, CE-marked, or PED compliant, with sanitary and clean-in-place (CIP/SIP) options
+          available. Purchasing used reactors from IPP can save up to 50% of capital and 90% of lead
+          time versus buying new.
+          <button type="button" class="lede-toggle" id="ledeToggleClose" aria-controls="ledeMore">
+            <span class="close-icon" aria-hidden="true">&#9650;</span><span class="sr">Show less</span>
+          </button>
+        </p>
+      </div>
       <div class="hero-btns">
         <a class="btn btn-primary" href="#">Request a Quote</a>
         <a class="btn btn-onnavy" href="#shop">Search Inventory</a>
@@ -170,19 +193,15 @@
             </div>
           </details>
 
-          <div class="fslider">
-            <div class="st">Capacity</div>
-            <div class="track" id="track">
-              <span class="fill" id="fill"></span>
-              <input type="range" id="capMin" min="0" max="70000" step="50" value="0" aria-label="Minimum capacity in litres">
-              <input type="range" id="capMax" min="0" max="70000" step="50" value="70000" aria-label="Maximum capacity in litres">
+          <details class="fgroup" open>
+            <summary>Capacity <span class="car" aria-hidden="true">&#9650;</span></summary>
+            <div class="fbody">
+              <label class="fopt"><input type="checkbox" data-g="cap" value="c0"> Up to 1,000 L <span class="n"></span></label>
+              <label class="fopt"><input type="checkbox" data-g="cap" value="c1"> 1,000 to 5,000 L <span class="n"></span></label>
+              <label class="fopt"><input type="checkbox" data-g="cap" value="c2"> 5,000 to 20,000 L <span class="n"></span></label>
+              <label class="fopt"><input type="checkbox" data-g="cap" value="c3"> Above 20,000 L <span class="n"></span></label>
             </div>
-            <div class="srow">
-              <span>L</span><input type="text" id="capMinTxt" value="0" inputmode="numeric" aria-label="Minimum capacity">
-              <span>&ndash;</span>
-              <input type="text" id="capMaxTxt" value="70,000" inputmode="numeric" aria-label="Maximum capacity"><span>L</span>
-            </div>
-          </div>
+          </details>
 
           <button class="reset" type="button" id="resetBtn">Reset Filters</button>
         </aside>
