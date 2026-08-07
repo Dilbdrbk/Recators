@@ -1,0 +1,444 @@
+{
+  "source": "https://ims.internationalprocessplants.com/inventory/search/equipment/reactor",
+  "capturedUtc": "2026-08-07T21:16:32Z",
+  "totalItems": 961,
+  "note": "Counts read from the rendered refinement panel. Manufacturer counts sum to 902, so roughly 59 units carry no manufacturer value.",
+  "reactorTypes": [
+    {
+      "label": "Batch-Type Agitated",
+      "code": "CSTR",
+      "slug": "batch-type-agitated",
+      "count": 761
+    },
+    {
+      "label": "Batch Type Body Only",
+      "code": "BTBO",
+      "slug": "batch-type-body-only",
+      "count": 181
+    },
+    {
+      "label": "Hydrogenation",
+      "code": "HYDRO",
+      "slug": "hydrogenation",
+      "count": 8
+    },
+    {
+      "label": "Fixed Bed",
+      "code": "FXBD",
+      "slug": "fixed-bed",
+      "count": 1
+    },
+    {
+      "label": "Fluid Bed",
+      "code": "FLBD",
+      "slug": "fluid-bed",
+      "count": 0
+    },
+    {
+      "label": "Polymerization",
+      "code": "POLYMER",
+      "slug": "polymerization",
+      "count": 0
+    }
+  ],
+  "tubularNote": "TUB appears as a subgroup code on several attributes but has no browse route on IMS. The marketing page currently lists Tubular as a type.",
+  "materialOfConstruction": {
+    "optionCount": 25,
+    "options": [
+      {
+        "label": "Glasslined",
+        "count": 660
+      },
+      {
+        "label": "Stainless Steel 316",
+        "count": 100
+      },
+      {
+        "label": "Stainless Steel 316L",
+        "count": 57
+      },
+      {
+        "label": "Stainless Steel Austenitic",
+        "count": 37
+      },
+      {
+        "label": "Stainless Steel 304",
+        "count": 34
+      },
+      {
+        "label": "Stainless Steel Other",
+        "count": 10
+      },
+      {
+        "label": "Stainless Steel 321",
+        "count": 8
+      },
+      {
+        "label": "Hastelloy - C276",
+        "count": 8
+      },
+      {
+        "label": "Hastelloy - C22",
+        "count": 7
+      },
+      {
+        "label": "Titanium",
+        "count": 4
+      },
+      {
+        "label": "Stainless Steel 304L",
+        "count": 3
+      },
+      {
+        "label": "Stainless Steel 316Ti",
+        "count": 3
+      },
+      {
+        "label": "Alloy 20",
+        "count": 2
+      },
+      {
+        "label": "Hastelloy - Other",
+        "count": 2
+      },
+      {
+        "label": "Nickel",
+        "count": 2
+      },
+      {
+        "label": "AL6XN Stainless",
+        "count": 1
+      },
+      {
+        "label": "Duplex 2205",
+        "count": 1
+      },
+      {
+        "label": "Stainless Steel 317",
+        "count": 1
+      },
+      {
+        "label": "Carbon Steel",
+        "count": 1
+      },
+      {
+        "label": "Carbon Steel with 316 SS lining",
+        "count": 1
+      },
+      {
+        "label": "Hastelloy - C4",
+        "count": 1
+      },
+      {
+        "label": "Inconel",
+        "count": 1
+      },
+      {
+        "label": "Monel",
+        "count": 1
+      },
+      {
+        "label": "Glass",
+        "count": 1
+      },
+      {
+        "label": "MISC",
+        "count": 1
+      }
+    ]
+  },
+  "condition": {
+    "optionCount": 8,
+    "countsShown": false,
+    "options": [
+      "Used",
+      "New",
+      "Unused",
+      "Re-glassed",
+      "Good Used Glass",
+      "Refurbished/Rebuilt",
+      "Needs Reglass",
+      "UNUSED-Reglassed"
+    ]
+  },
+  "manufacturer": {
+    "optionCount": 176,
+    "countSum": 902,
+    "singletonOptions": 116,
+    "top": [
+      {
+        "label": "Pfaudler",
+        "count": 342
+      },
+      {
+        "label": "DeDietrich",
+        "count": 92
+      },
+      {
+        "label": "UGE",
+        "count": 44
+      },
+      {
+        "label": "DeDietrich",
+        "count": 38,
+        "note": "duplicate entry, distinct from the 92"
+      },
+      {
+        "label": "Pfaudler (Germany)",
+        "count": 35
+      },
+      {
+        "label": "Gale Process Solutions",
+        "count": 30
+      },
+      {
+        "label": "EHW Thale",
+        "count": 15
+      },
+      {
+        "label": "Mechanicca Sarda",
+        "count": 12
+      },
+      {
+        "label": "Schwelm",
+        "count": 11
+      },
+      {
+        "label": "Sinclair Stainless Fabrications LTD.",
+        "count": 9
+      },
+      {
+        "label": "Pfaudler-Balfour",
+        "count": 8
+      },
+      {
+        "label": "James Bendall & Sons Ltd",
+        "count": 7
+      },
+      {
+        "label": "Werkhuizen A Deprest",
+        "count": 7
+      },
+      {
+        "label": "Cannon",
+        "count": 6
+      },
+      {
+        "label": "Schwelmer",
+        "count": 6
+      }
+    ]
+  },
+  "orientation": {
+    "optionCount": 3,
+    "options": [
+      "Horizontal",
+      "Inclined",
+      "Vertical"
+    ]
+  },
+  "supportType": {
+    "optionCount": 13,
+    "options": [
+      "Caster",
+      "Feet",
+      "Legs",
+      "Lugs",
+      "Pads",
+      "Saddle",
+      "Skid",
+      "Skirt",
+      "Sockets for pipe legs",
+      "Frame Mounted with Feet",
+      "Ring",
+      "Other",
+      "Base Mounted"
+    ]
+  },
+  "glassFirePolish": {
+    "optionCount": 5,
+    "options": [
+      "New",
+      "Full Fire Polish (FF)",
+      "Some Fire Polish (F)",
+      "No Fire Polish (NF)",
+      "Bad Glass (BG)"
+    ]
+  },
+  "glassCondition": {
+    "optionCount": 5,
+    "options": [
+      "New",
+      "Very Clean (VC)",
+      "Clean (C)",
+      "Dirty (D) (light cleaning needed)",
+      "Very Dirty (VD) Power wash at minimum"
+    ]
+  },
+  "jacketMaterialOfConstruction": {
+    "optionCount": 69
+  },
+  "tubeMaterial": {
+    "optionCount": 69
+  },
+  "tubeSheetMaterial": {
+    "optionCount": 69
+  },
+  "measureAttributes": [
+    {
+      "name": "Capacity (Design)",
+      "us": "gallons",
+      "metric": "L",
+      "group": "Overview",
+      "appliesTo": [
+        "CSTR",
+        "HYDRO",
+        "POLYMER",
+        "FLBD",
+        "FXBD",
+        "BTBO"
+      ]
+    },
+    {
+      "name": "Internal Pressure",
+      "us": "psi",
+      "metric": "bar",
+      "group": "Pressure Vessel",
+      "appliesTo": [
+        "TUB",
+        "CSTR",
+        "HYDRO",
+        "POLYMER",
+        "FLBD",
+        "FXBD",
+        "BTBO"
+      ]
+    },
+    {
+      "name": "Internal Temperature",
+      "us": "degF",
+      "metric": "degC",
+      "group": "Pressure Vessel",
+      "appliesTo": [
+        "TUB",
+        "CSTR",
+        "HYDRO",
+        "POLYMER",
+        "FLBD",
+        "FXBD",
+        "BTBO"
+      ]
+    },
+    {
+      "name": "Jacket Pressure",
+      "us": "psi",
+      "metric": "bar",
+      "group": "Jacket/Internal Coil",
+      "appliesTo": [
+        "TUB",
+        "CSTR",
+        "HYDRO",
+        "POLYMER",
+        "FXBD",
+        "BTBO"
+      ]
+    },
+    {
+      "name": "Jacket Temperature",
+      "us": "degF",
+      "metric": "degC",
+      "group": "Jacket/Internal Coil",
+      "appliesTo": [
+        "TUB",
+        "CSTR",
+        "HYDRO",
+        "POLYMER",
+        "FXBD",
+        "BTBO"
+      ]
+    },
+    {
+      "name": "Diameter",
+      "us": "in",
+      "metric": "mm",
+      "group": "Dimensions",
+      "appliesTo": [
+        "CSTR",
+        "HYDRO",
+        "POLYMER",
+        "BTBO"
+      ]
+    }
+  ],
+  "booleanAttributes": [
+    {
+      "name": "Internal Full Vacuum",
+      "group": "Pressure Vessel",
+      "appliesTo": [
+        "TUB",
+        "CSTR",
+        "HYDRO",
+        "POLYMER",
+        "FLBD",
+        "FXBD",
+        "BTBO"
+      ]
+    },
+    {
+      "name": "Sanitary Construction",
+      "group": "Overview",
+      "appliesTo": [
+        "CSTR",
+        "HYDRO",
+        "POLYMER",
+        "BTBO"
+      ]
+    },
+    {
+      "name": "Body Only",
+      "group": "Overview",
+      "appliesTo": [
+        "CSTR",
+        "HYDRO",
+        "POLYMER",
+        "FLBD",
+        "FXBD",
+        "BTBO"
+      ]
+    },
+    {
+      "name": "Agitation",
+      "group": "Agitation System",
+      "appliesTo": [
+        "CSTR",
+        "HYDRO",
+        "POLYMER"
+      ]
+    },
+    {
+      "name": "CIP",
+      "group": "Other Specifications",
+      "appliesTo": [
+        "CSTR",
+        "HYDRO",
+        "POLYMER",
+        "FLBD"
+      ]
+    }
+  ],
+  "sortOptions": [
+    "Featured",
+    "Stock Number (high to low)",
+    "Stock Number (low to high)",
+    "Capacity (high to low)",
+    "Capacity (low to high)",
+    "Recently Updated",
+    "Best Match"
+  ],
+  "unitToggle": [
+    "US",
+    "Metric"
+  ],
+  "pageSize": 25,
+  "typeCountsNote": "Read from the rendered ITEMS counter on each type page, 7 Aug 2026. Sum is 951 against a reported total of 961, so about 10 units carry no subtype."
+}

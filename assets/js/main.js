@@ -79,20 +79,11 @@
     LABELS[b.dataset.g + ':' + b.value] = b.parentNode.textContent.replace(/\s+/g, ' ').trim();
   });
 
-  /* capacity bands, derived from the published capacity on each card */
-  function capBand(card) {
-    var raw = card.dataset.cap;
-    if (raw === '' || raw === undefined) { return null; }
-    var v = parseFloat(raw);
-    if (!v) { return null; }
-    if (v <= 1000) { return 'c0'; }
-    if (v <= 5000) { return 'c1'; }
-    if (v <= 20000) { return 'c2'; }
-    return 'c3';
-  }
-
+  /* Every facet value is precomputed onto the card as a data attribute, and the
+     group name on each checkbox matches its attribute, so this is a direct read.
+     A blank value means the unit has no published figure for that attribute, and
+     it is correctly excluded when that facet is applied. */
   function facet(card, group) {
-    if (group === 'cap') { return capBand(card); }
     return card.dataset[group] || null;
   }
 
