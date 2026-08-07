@@ -156,15 +156,40 @@
   "condition": {
     "optionCount": 8,
     "countsShown": false,
+    "countsNote": "IMS renders Condition without counts. These were measured through POST /inventory/search/update-results with a bare criteria object, one query per value. The eight sum to exactly 961, which reconciles against the reported total.",
     "options": [
-      "Used",
-      "New",
-      "Unused",
-      "Re-glassed",
-      "Good Used Glass",
-      "Refurbished/Rebuilt",
-      "Needs Reglass",
-      "UNUSED-Reglassed"
+      {
+        "label": "Used",
+        "count": 643
+      },
+      {
+        "label": "New",
+        "count": 82
+      },
+      {
+        "label": "Unused",
+        "count": 36
+      },
+      {
+        "label": "Re-glassed",
+        "count": 139
+      },
+      {
+        "label": "Good Used Glass",
+        "count": 5
+      },
+      {
+        "label": "Refurbished/Rebuilt",
+        "count": 5
+      },
+      {
+        "label": "Needs Reglass",
+        "count": 51
+      },
+      {
+        "label": "UNUSED-Reglassed",
+        "count": 0
+      }
     ]
   },
   "manufacturer": {
@@ -446,5 +471,6 @@
     "Metric"
   ],
   "pageSize": 25,
-  "typeCountsNote": "Read from the rendered ITEMS counter on each type page, 7 Aug 2026. 761+181+8+3+1+0+0 = 954 against a reported total of 961, so 7 units carry no subtype."
+  "typeCountsNote": "Read from the rendered ITEMS counter on each type page, 7 Aug 2026. 761+181+8+3+1+0+0 = 954 against a reported total of 961, so 7 units carry no subtype.",
+  "materialCountCaveat": "Material counts here are the site's own rendered facet counts. Those are presence counts that do not partition: they sum to 947 against 961. A live query returns 662 for Glasslined where the panel displays 660, so treat these as the published figures rather than exact partitions."
 }
