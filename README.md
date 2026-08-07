@@ -10,14 +10,28 @@ around a filter rail and a card grid.
 
 ```
 .
-├── index.html              the full page
-├── vercel.json             static hosting config, headers and caching
+├── index.html                the full page
+├── build.py                  stamps content hashes onto the asset URLs
+├── inventory.json            the 56 real units the grid is built from
+├── ims-reactor-facets.json   facet schema captured from IPP's inventory system
+├── vercel.json               static hosting config, headers and caching
 └── assets
     ├── css
-    │   └── style.css       all page styles
+    │   └── style.css         all page styles
     └── js
-        └── main.js         tab switching and filter reset
+        └── main.js           tabs, hero read more, inventory filter
 ```
+
+## After editing anything under assets/
+
+```bash
+python3 build.py
+```
+
+This rewrites the `?v=` stamp on the stylesheet and script to a hash of their own
+contents. Without it a browser that cached the old files keeps serving them, and
+the page renders new markup against an old stylesheet and an old script. That is
+exactly what happened once already, so the step is not optional.
 
 No build step, no dependencies, no framework. Vercel serves it as a static site with zero
 configuration. There is deliberately no `package.json`, so Vercel never attempts a build.
