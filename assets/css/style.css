@@ -357,7 +357,9 @@ body {
    Working filter rail. Dual-thumb capacity range, zero-count facets,
    active filter chips and the no-results state.
    ------------------------------------------------------------------ */
-.fopt.is-empty { opacity: .42; cursor: not-allowed; }
+/* An option that can return nothing is removed, not greyed. A visible control
+   that yields zero results is a dead end the buyer has to discover by clicking. */
+.fopt.is-empty { display: none; }
 .fopt input:disabled { cursor: not-allowed; }
 
 .chips-row { margin-bottom: 14px; }
